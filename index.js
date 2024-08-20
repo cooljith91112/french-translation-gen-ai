@@ -30,7 +30,7 @@ app.post("/translate", upload.single("translatej"), async (req, res) => {
     }
 });
 
-app.listen(process.env.PORT | port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log(`French Translator is running at ${port}`);
 });
 
