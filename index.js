@@ -26,6 +26,7 @@ app.post("/translate", upload.single("translatej"), async (req, res) => {
         res.send(genAIResponse);
         // res.send("# Marked in the browser\n\nRendered by **marked**.")
     } catch (e) {
+        console.log("Error: ", e)
         res.send(`<b>Not a valid JSON file.</b>`)
     }
 });
