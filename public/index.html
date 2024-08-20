@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://unpkg.com/htmx.org@2.0.2"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it@14.1.0/dist/markdown-it.min.js"></script>
+    <title>French Translator</title>
+</head>
+
+<body>
+    <h3>French Translator</h3>
+    <form id="file-form" hx-post="/translate" hx-trigger="submit" hx-target="#response"
+        hx-encoding="multipart/form-data" hx-ext="fileparse" hx-indicator="#loading">
+        <input type="file" id="file-input" accept=".json" name="translatej">
+        <button type="submit">Translate File</button>
+    </form>
+    <div id="loading" class="htmx-indicator">Querying Google Generative AI...</div>
+    <div id="response" hx-ext="marked"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
