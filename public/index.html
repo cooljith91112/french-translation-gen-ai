@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
-        <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://unpkg.com/htmx.org@2.0.2"></script>
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/markdown-it@14.1.0/dist/markdown-it.min.js"></script>
@@ -15,8 +15,14 @@
 
 <body>
     <div class="container">
-        <h3 class="heading">French Translator - Google GenAI</h3>
-        <div class="warning">(Please don't upload any sensitive documents)</div>
+        <div class="header-container">
+            <h3 class="heading">
+                French Translator - Google GenAI
+                <object class="badge" data="https://img.shields.io/github/forks/cooljith91112/french-translation-gen-ai
+                "></object>
+            </h3>
+            <div class="warning">(Please don't upload any sensitive documents)</div>
+        </div>
         <form id="file-form" hx-post="/translate" hx-trigger="submit" hx-target="#response"
             hx-encoding="multipart/form-data" hx-ext="fileparse" hx-indicator="#loading">
             <input type="file" id="file-input" accept=".json" name="translatej">

@@ -2,6 +2,12 @@
     margin-bottom: 0px;
 }
 
+.container .heading .badge {
+    position: absolute;
+    margin-top: 2px;
+    margin-left: 4px;
+}
+
 .container .warning {
     margin-bottom: 10px;
 }
